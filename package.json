@@ -1,11 +1,11 @@
 {
   "name": "serverside",
   "version": "1.0.0",
-  "description": "Ecommerce with MERN  Stack",
+  "description": "Ecommerce with MERN Stack",
   "license": "ISC",
   "author": "",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js"
   },

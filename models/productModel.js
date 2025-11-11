@@ -23,7 +23,7 @@ const productSchema = new mongoose.Schema({
         type: Number,
         default: 0
     },
-    createdBy: {type: mongoose.Schema.Types.ObjectId, ref: User}
+    createdBy: {type: mongoose.Schema.Types.ObjectId, ref: "User"}
 }, {timestamps: true})
 
 module.exports = mongoose.model("Product", productSchema)

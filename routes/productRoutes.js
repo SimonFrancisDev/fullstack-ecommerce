@@ -1,16 +1,14 @@
-import express from 'express';
-import Product from '../models/productModel.js';
-import { protect, adminOnly } from "../middleware/authMiddleware.js";
-import { addProduct, getProduct } from '../controllers/prodCtrl.js';
+const express = require("express");
+const Product = require("../models/productModel");
+const { protect, adminOnly } = require("../middleware/authMiddleware");
+const { addProduct, getProduct } = require("../controllers/prodCtrl");
 
-// configure express
 const router = express.Router();
 
-// routes for creating products in the database
-// admins only
+// Admin adds product
 router.post("/", protect, adminOnly, addProduct);
 
+// Users view products
+router.get("/", protect, getProduct);
 
-
-// routes for accessing products listings
-router.get("/", protect,  getProduct);
+module.exports = router;
